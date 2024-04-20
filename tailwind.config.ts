@@ -56,6 +56,9 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        purple: "#a374ff",
+        yellow: "#ffd074",
+        sky: "#17f1d1",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -71,10 +74,15 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        fullSpin: {
+          from: { transform: "rotate(0deg)" },
+          to: { transform: "rotate(360deg)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        fullSpin: "fullSpin 0.5s ease-in-out",
       },
     },
   },

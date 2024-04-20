@@ -1,8 +1,51 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import localFont from "next/font/local";
 
 const inter = Inter({ subsets: ["latin"] });
+
+const antiqueOlive = localFont({
+  src: [
+    {
+      path: "../public/fonts/aniqueOlive/antique-olive-bold.ttf",
+      style: "normal",
+      weight: "800",
+    },
+  ],
+  variable: "--font-antique-olive",
+});
+
+const matter = localFont({
+  src: [
+    {
+      path: "../public/fonts/matter/Matter-Regular.ttf",
+      style: "normal",
+      weight: "400",
+    },
+    {
+      path: "../public/fonts/matter/Matter-Medium.ttf",
+      style: "normal",
+      weight: "500",
+    },
+    {
+      path: "../public/fonts/matter/Matter-SemiBold.ttf",
+      style: "normal",
+      weight: "600",
+    },
+    {
+      path: "../public/fonts/matter/Matter-Bold.ttf",
+      style: "normal",
+      weight: "700",
+    },
+    {
+      path: "../public/fonts/matter/Matter-Heavy.ttf",
+      style: "normal",
+      weight: "800",
+    },
+  ],
+  variable: "--font-matter",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +59,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body
+        className={`${matter.variable} ${antiqueOlive.variable}  ${inter.className}`}
+      >
+        {children}
+      </body>
     </html>
   );
 }

@@ -163,3 +163,9 @@ body::-webkit-scrollbar-thumb {
     --ring: 212.7 26.8% 83.9%;
   }
 }
+
+@layer utilities {
+  .main-container {
+    @apply w-full px-6 py-5 md:px-10 2xl:py-8;
+  }
+}

@@ -59,6 +59,8 @@ const config = {
         purple: "#a374ff",
         yellow: "#ffd074",
         sky: "#17f1d1",
+        primaryBlack: "#1d1d1f",
+        textBlack: "#262629",
       },
       borderRadius: {
         lg: "var(--radius)",

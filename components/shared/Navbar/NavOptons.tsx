@@ -78,6 +78,7 @@ const NavOptons = () => {
                 className="w-fit relative"
               >
                 <Link
+                  key={i + 1}
                   href={"/"}
                   ref={textWordRef}
                   className="flex items-center"
@@ -105,7 +106,7 @@ const NavOptons = () => {
                   initial={{ width: "0%" }}
                   animate={{ width: isHovered[i] ? "103%" : "0%" }}
                   transition={{ duration: 1, ease: [0.215, 0.61, 0.355, 1] }}
-                  className="w-full h-1 lg:h-2 2xl:h-3 bg-purple absolute z-[2]"
+                  className="w-full h-[6px] lg:h-2 2xl:h-3 bg-purple absolute z-[2]"
                   style={{
                     top: `${textWordHeight / 2}px`,
                   }}

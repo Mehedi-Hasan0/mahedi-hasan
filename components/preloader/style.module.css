@@ -1,0 +1,29 @@
+.navParent > svg {
+  position: fixed;
+  z-index: 20;
+  height: calc(100vh + 600px);
+  width: 100vw;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+}
+.navParent > svg,
+.background {
+  position: fixed;
+
+  height: calc(100vh + 600px);
+
+  width: 100vw;
+
+  pointer-events: none;
+
+  left: 0;
+
+  top: 0;
+}
+
+.background {
+  background-color: white;
+
+  transition: opacity 0s linear 0.1s;
+}

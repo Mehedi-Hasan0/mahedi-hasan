@@ -10,7 +10,7 @@ interface CustomButtonProps {
   hoverColor1?: string;
   hoverColor2?: string;
   hoverColor3?: string;
-  textLabel: string;
+  textLabel?: string;
   [propName: string]: any;
 }
 

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Navbar from "@/components/shared/Navbar";
+import Navbar from "@/components/shared/Navbar/Navbar";
 
 const antiqueOlive = localFont({
   src: [

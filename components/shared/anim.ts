@@ -290,7 +290,7 @@ export const secondHeadingLetterVariant = {
       },
       x: {
         duration: 0.65, // duration of x axis animation
-        delay: 0.2 + i * 0.02, // incrementing delay for element
+        delay: 0.3 + i * 0.03, // incrementing delay for element
         ease: [0.215, 0.61, 0.355, 1],
       },
       // delay: 0., // overall delay for the animation to start
@@ -316,7 +316,7 @@ export const thirdHeadingLetterVariant = {
       },
       x: {
         duration: 0.65, // duration of x axis animation
-        delay: 0.2 + i * 0.02, // incrementing delay for element
+        delay: 0.4 + i * 0.04, // incrementing delay for element
         ease: [0.215, 0.61, 0.355, 1],
       },
       // delay: 0., // overall delay for the animation to start
@@ -343,14 +343,37 @@ export const opacityContainer = {
   },
 };
 
+// banner mobile btn container
+export const mobileBtnContainer = {
+  initial: {
+    opacity: 0,
+    y: 10,
+  },
+  enter: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1.2,
+      opacity: {
+        duration: 0.65,
+        delay: 0.3,
+      },
+      ease: [0.215, 0.61, 0.355, 1],
+      delay: 0.3,
+    },
+  },
+};
+
 // banner image anim variants
 export const imgVariants = {
   initial: { opacity: 0 },
   enter: {
     opacity: 1,
     transition: {
+      duration: 1,
       opacity: {
-        delay: 0.6,
+        delay: 0.8,
+        ease: [0.215, 0.61, 0.355, 1],
       },
       ease: [0.76, 0, 0.24, 1],
     },

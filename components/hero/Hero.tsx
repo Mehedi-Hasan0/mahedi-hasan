@@ -8,6 +8,7 @@ import {
   firstHeadingLetterVariant,
   firstHeadingVariants,
   imgVariants,
+  mobileBtnContainer,
   opacityContainer,
   secondHeadingLetterVariant,
   secondHeadingVariants,
@@ -31,6 +32,7 @@ export default function Hero() {
           variants={imgVariants} // needs to check to disable animation for mobile
           initial="initial"
           animate="enter"
+          className=" relative z-20"
         >
           <Image
             src={mahediHasan}
@@ -43,13 +45,13 @@ export default function Hero() {
           />
         </motion.div>
         {/* text */}
-        <div className=" text-center flex flex-col gap-1 items-center justify-center">
+        <div className=" text-center flex flex-col gap-1 items-center justify-center relative z-10">
           {/* 1st text */}
           <motion.h1
             variants={firstHeadingVariants} // needs to check to disable animation for mobile
             initial="initial"
             animate="enter"
-            className="text-[2.7rem] sm:text-7xl md:text-8xl lg:text-7xl 2xl:text-[5.25rem] leading-[0.9] hidden lowercase md:flex items-center"
+            className="text-[2.7rem] sm:text-6xl md:text-7xl lg:text-7xl 2xl:text-[5.25rem] leading-[0.9] hidden lowercase md:flex items-center"
           >
             {creative.split("").map((word, i) => (
               <motion.span
@@ -69,10 +71,10 @@ export default function Hero() {
               variants={secondHeadingVariants}
               initial="initial"
               animate="enter"
-              className="text-[2.7rem] sm:text-7xl md:text-8xl lg:text-6xl xl:text-7xl 2xl:text-[5.25rem] leading-[0.9] lowercase  md:flex items-center"
+              className="text-[2.7rem] sm:text-6xl md:text-7xl lg:text-6xl xl:text-7xl 2xl:text-[5.25rem] leading-[0.9] lowercase flex items-center"
             >
               {frontend.split("").map((word, j) => (
-                <motion.span
+                <motion.p
                   custom={j}
                   variants={secondHeadingLetterVariant}
                   initial="initial"
@@ -80,7 +82,7 @@ export default function Hero() {
                   key={j}
                 >
                   {word}
-                </motion.span>
+                </motion.p>
               ))}
             </motion.h1>
             {/* btn */}
@@ -106,7 +108,7 @@ export default function Hero() {
             variants={thirdHeadingVariants}
             initial="initial"
             animate="enter"
-            className="text-[2.7rem] sm:text-7xl md:text-8xl lg:text-7xl 2xl:text-[5.25rem] leading-[0.9] lowercase flex items-center md:ml-[12%]"
+            className="text-[2.7rem] sm:text-6xl md:text-7xl lg:text-7xl 2xl:text-[5.25rem] leading-[0.9] lowercase flex items-center md:ml-[12%]"
           >
             {devloper.split("").map((word, i) => (
               <motion.p
@@ -122,7 +124,12 @@ export default function Hero() {
           </motion.h1>
         </div>
         {/* btn */}
-        <div className="max-w-[200px] mx-auto -mt-2 sm:-mt-8 block md:hidden">
+        <motion.div
+          variants={mobileBtnContainer}
+          initial="initial"
+          animate="enter"
+          className="max-w-[200px] mx-auto -mt-2 sm:-mt-8 block md:hidden"
+        >
           <CustomButton
             textLabel="Discover my project"
             btnBgColor="bg-yellow"
@@ -132,7 +139,7 @@ export default function Hero() {
             hoverColor3="bg-yellow"
             borderColor="border-transparent"
           />
-        </div>
+        </motion.div>
       </div>
     </div>
   );

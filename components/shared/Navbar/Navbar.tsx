@@ -31,7 +31,7 @@ export default function Navbar() {
   return (
     <header
       ref={headerRef}
-      className={`main-container sticky top-0 z-50 bg-primaryBlack md:bg-transparent border-b border-[#373739] md:border-none`}
+      className={`main-container fixed top-0 z-50 border-b border-[#373739] bg-primaryBlack md:bg-transparent md:border-none`}
     >
       <nav className="flex justify-between items-center">
         {/* logo */}
@@ -69,7 +69,7 @@ export default function Navbar() {
               className={`absolute left-[120px] 2xl:left-[180px] pl-[0.3em]  transition-transform duration-500 ease-in-out
             ${
               navHeight > 100
-                ? "translate-x-[-65px] 2xl:translate-x-[-90px]" // after scroll Y to 100 then stopping hover animation and auto animating text
+                ? "translate-x-[-65px] 2xl:translate-x-[-90px] hidden" // after scroll Y to 100 then stopping hover animation and auto animating text
                 : "group-hover:translate-x-[-65px] 2xl:group-hover:translate-x-[-90px]"
             }
             `}

@@ -11,6 +11,9 @@ interface CustomButtonProps {
   hoverColor2?: string;
   hoverColor3?: string;
   textLabel?: string;
+  btnBgColor?: string;
+  textColor?: string;
+  borderColor?: string;
   [propName: string]: any;
 }
 
@@ -23,6 +26,9 @@ const CustomButton: React.FC<CustomButtonProps> = ({
   hoverColor1 = "bg-yellow",
   hoverColor2 = "bg-sky",
   hoverColor3 = "bg-purple",
+  btnBgColor = "bg-transparent",
+  textColor = "text-white",
+  borderColor = "border-purple",
   textLabel,
   ...attributes
 }) => {
@@ -61,7 +67,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({
 
   return (
     <div
-      className="rounded-[3em] border border-purple cursor-pointer relative flex justify-center items-center px-6 py-3 2xl:px-9 2xl:py-[18px] customButton"
+      className={`rounded-[3em] border  cursor-pointer relative flex justify-center items-center px-6 py-3 2xl:px-9 2xl:py-[18px] customButton ${btnBgColor} ${borderColor}`}
       style={{ overflow: "hidden" }}
       onMouseEnter={() => {
         manageMouseEnter();
@@ -71,7 +77,11 @@ const CustomButton: React.FC<CustomButtonProps> = ({
       }}
       {...attributes}
     >
-      {children ? children : <PerspectiveText label={textLabel} />}
+      {children ? (
+        children
+      ) : (
+        <PerspectiveText label={textLabel} textColor={textColor} />
+      )}
 
       <div
         ref={circle}

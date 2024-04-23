@@ -58,7 +58,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${matter.variable} ${antiqueOlive.variable}`}>
-        <Navbar />
+        {/* <Navbar /> */}
         {children}
       </body>
     </html>

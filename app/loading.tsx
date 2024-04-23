@@ -1,11 +1,9 @@
 "use client";
 
+import Loader from "@/components/shared/loader/Loader";
+
 const Loading = () => {
-  return (
-    <div className="w-screen h-screen text-center bg-primaryBlack relative z-50">
-      Loading
-    </div>
-  );
+  return <Loader />;
 };
 
 export default Loading;

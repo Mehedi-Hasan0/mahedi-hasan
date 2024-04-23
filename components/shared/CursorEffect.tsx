@@ -44,11 +44,11 @@ export default function CursorEffect() {
   }, [scrollY]);
 
   return (
-    <div className=" blur-[80px]">
+    <div className=" blur-[90px]">
       <div
         id="blob"
         ref={blobRef}
-        className="bg-gradient-to-br from-purple to-yellow"
+        className="bg-gradient-to-br from-sky via-purple to-yellow"
       />
     </div>
   );

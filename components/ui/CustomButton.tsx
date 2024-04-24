@@ -43,12 +43,12 @@ const CustomButton: React.FC<CustomButtonProps> = ({
       timeline.current
         .to(
           circle.current,
-          { top: "-95%", width: "150%", duration: 0.4, ease: "power3.in" },
+          { top: "-138%", width: "150%", duration: 0.4, ease: "power3.in" },
           "enter"
         )
         .to(
           circle.current,
-          { top: "-240%", width: "125%", duration: 0.3 },
+          { top: "-290%", width: "125%", duration: 0.4 },
           "exit"
         );
     }
@@ -91,10 +91,10 @@ const CustomButton: React.FC<CustomButtonProps> = ({
           className={`${hoverColor1} w-full h-full rounded-[50%] absolute top-0`}
         />
         <div
-          className={`${hoverColor2} w-full h-full rounded-[50%] absolute top-4`}
+          className={`${hoverColor2} w-full h-full rounded-[50%] absolute top-7`}
         />
         <div
-          className={`${hoverColor3} w-full h-full rounded-[50%] absolute top-9`}
+          className={`${hoverColor3} w-full h-full rounded-[50%] absolute top-16`}
         />
       </div>
     </div>

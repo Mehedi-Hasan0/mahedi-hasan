@@ -21,8 +21,8 @@ const frontend = "frontend";
 const devloper = "developer";
 
 export default function Hero() {
-  const isMobile =
-    typeof window !== "undefined" && window.innerWidth < 768 ? true : false;
+  // const isMobile =
+  //   typeof window !== "undefined" && window.innerWidth < 768 ? true : false;
 
   return (
     <div className="main-container section-margin relative z-20">
@@ -86,22 +86,24 @@ export default function Hero() {
               ))}
             </motion.h1>
             {/* btn */}
-            <motion.div
-              variants={opacityContainer}
-              initial="initial"
-              animate="enter"
-              className="max-w-[200px] 2xl:max-w-[260px] md:block hidden"
-            >
-              <CustomButton
-                textLabel="Discover my project"
-                btnBgColor="bg-yellow"
-                textColor="text-black"
-                hoverColor1="bg-purple"
-                hoverColor2="bg-sky"
-                hoverColor3="bg-yellow"
-                borderColor="border-transparent"
-              />
-            </motion.div>
+            <div className="w-[200px] 2xl:w-[260px]  justify-center md:flex hidden">
+              <motion.div
+                variants={opacityContainer}
+                initial="initial"
+                animate="enter"
+                className="max-w-[200px] hover:max-w-[190px] 2xl:max-w-[260px] 2xl:hover:max-w-[250px]  transition-all duration-300 ease-in"
+              >
+                <CustomButton
+                  textLabel="Discover my project"
+                  btnBgColor="bg-yellow"
+                  textColor="text-black"
+                  hoverColor1="bg-purple"
+                  hoverColor2="bg-sky"
+                  hoverColor3="bg-yellow"
+                  borderColor="border-transparent"
+                />
+              </motion.div>
+            </div>
           </div>
           {/* 3rd text */}
           <motion.h1

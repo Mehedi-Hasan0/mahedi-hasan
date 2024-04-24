@@ -329,15 +329,21 @@ export const thirdHeadingLetterVariant = {
 export const opacityContainer = {
   initial: {
     opacity: 0,
+    x: 15,
   },
   enter: {
     opacity: 1,
+    x: 0,
     transition: {
       duration: 1.2,
       opacity: {
-        delay: 0.65,
+        delay: 0.8,
       },
-      ease: [0.76, 0, 0.24, 1],
+      x: {
+        delay: 0.4,
+      },
+      // ease: [0.76, 0, 0.24, 1],
+      ease: [0.215, 0.61, 0.355, 1],
     },
     // ease: [0.76, 0, 0.24, 1],
   },

@@ -3,10 +3,8 @@
 import Hero from "@/components/hero/Hero";
 import CursorEffect from "@/components/shared/CursorEffect";
 import Navbar from "@/components/shared/Navbar/Navbar";
-import Loader from "@/components/shared/loader/Loader";
-import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
-import { HashLoader, PulseLoader } from "react-spinners";
+import { PulseLoader } from "react-spinners";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -15,6 +13,15 @@ export default function Home() {
     setTimeout(() => {
       setLoading(false);
     }, 1000);
+  }, []);
+
+  // for smooth scrolling
+  useEffect(() => {
+    (async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+
+      const locomotiveScroll = new LocomotiveScroll();
+    })();
   }, []);
 
   if (loading) {
